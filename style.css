@@ -1,0 +1,175 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Pacifico', cursive;
+    overflow: hidden;
+}
+
+#flipbook {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Navbar Styles */
+#navbar {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+#navbar button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#navbar button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Main Pages */
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 1s ease;
+}
+
+.day {
+    background: linear-gradient(to right, #4ce4f8, #f3c325);
+    left: 0;
+}
+
+.dusk {
+    background: linear-gradient(to right, #ffa844, #8B0000);
+    left: 200%;
+}
+
+.night {
+    background: linear-gradient(to right, #191970, #000033);
+    left: 400%;
+}
+
+/* Transition Pages */
+.day-to-dusk {
+    background: linear-gradient(to right, #f3c325, #ffa844);
+    left: 100%;
+}
+
+.dusk-to-night {
+    background: linear-gradient(to right, #8B0000, #191970);
+    left: 300%;
+}
+
+/* Text and Button Styling */
+h1 {
+    font-size: 3em;
+    color: #fff;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+/* Compass UI at Bottom */
+#compass {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 150px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    pointer-events: none; /* Prevent interference with page elements */
+    z-index: 10;
+}
+
+#path {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    border-top: 3px solid rgba(255, 255, 255, 0.5); /* Semi-transparent line for half-circle path */
+    border-radius: 50%;
+}
+
+#sun-moon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: yellow; /* Sun color */
+    position: absolute;
+    transition: left 1s ease, bottom 1s ease;
+}
+
+/* Transition Colors for Sun/Moon */
+.day #sun-moon { background: yellow; }          /* Sun color */
+.dusk #sun-moon { background: orange; }          /* Transition color */
+.night #sun-moon { background: #fff; }           /* Moon color */
+
+        /* Container for stars */
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        /* Star styles */
+        .stars span {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: twinkle 3s infinite ease-in-out;
+        }
+
+        /* Twinkling animation */
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        p {
+            font-size: 1.2em; /* Slightly larger than the default size */
+        }
+
+
+    

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day Cycle Flipbook</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="flipbook">
+        <!-- Main Pages and Transitions -->
+        <div class="page day active">
+            <h1>The Day</h1>
+            <p>A start of a journey, Bright its light</p>
+            <p>I am afflicted with its warm blight</p>
+            <p>Gentle your touch, and lovely your smile</p>
+            <p>Giggles gleam and your laugh adored.</p>
+            <p>I simply want to see and hear more.</p>
+            <br>
+            <p>Dreams a billion, You are one in a trillion</p>
+            <p>My love blooms on a simple hill, A cabin and a meal</p>
+            <p>Time is short, But ours isnt.</p>
+            <button onclick="nextPage()">Next</button>
+        </div>
+        <div class="page day-to-dusk">
+            <h1>From day to dusk, the sky's delight </h1>
+            <h1>Pure, Day or night</h1>
+        </div>
+        <div class="page dusk">
+            <h1>Dusk The setting sun. A perfect place</h1>
+                <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/97aPzeTSNJw" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+            <button onclick="nextPage()">Next</button>
+            </div>
+        <div class="page dusk-to-night">
+            <h1>Dusk to Night, You are a beautiful sight</h1>
+        </div>
+        <div class="page night">
+            <div class="stars">
+            </div>
+            <h1>Night</h1>
+            <p style = "color:antiquewhite">Check the present❤️</p>
+            <button onclick="nextPage()">Start Over</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
